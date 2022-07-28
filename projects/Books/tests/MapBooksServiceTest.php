@@ -6,6 +6,7 @@ use Javacream\Training\Books\Isbngenerator\Impl\CounterIsbnGenerator;
 use Javacream\Training\Books\Warehouse\Api\BookException;
 use Javacream\Training\Books\Warehouse\Impl\MapBooksService;
 use Javacream\Training\Store\Impl\SimpleStoreService;
+use Javacream\Training\Util\IdGenerator\IdGenerator;
 
 final class MapBooksServiceTest extends TestCase
 {
@@ -16,6 +17,7 @@ final class MapBooksServiceTest extends TestCase
         $isbnGenerator = new CounterIsbnGenerator();
         $isbnGenerator->prefix = "Isbn:";
         $isbnGenerator->countryCode = "-dk";
+        $isbnGenerator->idGenerator = new IdGenerator();
         $storeService = new SimpleStoreService();
         $storeService->defaultStock = 42;
         $this->booksService = new MapBooksService($isbnGenerator, $storeService);

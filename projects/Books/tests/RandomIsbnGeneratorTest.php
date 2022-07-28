@@ -16,8 +16,10 @@ final class RandomIsbnGeneratorTest extends TestCase
     }
     function testIsbnGeneratorCreatesIsbn()
     {
-        $this->assertTrue(str_starts_with($this->isbnGenerator->next(), 'Isbn:'));
-        $this->assertTrue(str_ends_with($this->isbnGenerator->next(), '-dk'));
+        $isbn = $this->isbnGenerator->next();
+        $this->assertTrue(substr($isbn, 0, 5) === 'Isbn:');
+        $len = strlen($isbn);
+        $this->assertTrue(substr($isbn, $len-3, $len) === '-dk');
     }
 
 }

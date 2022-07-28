@@ -2,6 +2,8 @@
 
 use PHPUnit\Framework\TestCase;
 use Javacream\Training\Books\Isbngenerator\Impl\CounterIsbnGenerator;
+use Javacream\Training\Util\IdGenerator\IdGenerator;
+
 final class CounterIsbnGeneratorTest extends TestCase
 {
     private $isbnGenerator;
@@ -9,6 +11,7 @@ final class CounterIsbnGeneratorTest extends TestCase
     function setUp(): void
     {
         $this->isbnGenerator = new CounterIsbnGenerator();
+        $this->isbnGenerator->idGenerator = new IdGenerator();
         $this->isbnGenerator->prefix = "Isbn:";
         $this->isbnGenerator->countryCode = "-dk";
         
