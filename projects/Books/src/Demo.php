@@ -5,7 +5,10 @@ $password = "user";
 $db = "javacream";
 // Create connection
 $conn = new mysqli($servername, $username, $password, $db);
-
+if ($conn -> connect_errno) {
+    echo "Failed to connect to MySQL: " . $mysqli -> connect_error;
+    exit();
+  }
 $query = "SELECT * from messages";
 
 $res = mysqli_query($conn, $query);

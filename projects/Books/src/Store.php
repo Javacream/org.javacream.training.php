@@ -1,7 +1,7 @@
 <?php namespace Javacream\Training\Store\Api;
     interface StoreService
     {
-        function getStock($category, $item);
+        function getStock(string $category, string $item) : int;
     }
 ?>
 
@@ -9,8 +9,8 @@
     use Javacream\Training\Store\Api\StoreService;
 
     class SimpleStoreService implements StoreService{
-        public $defaultStock;
-        function getStock($category, $item){
+        public int $defaultStock;
+        function getStock(string $category, string $item) : int{
             return $this->defaultStock;
         }
     }

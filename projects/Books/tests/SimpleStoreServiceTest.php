@@ -15,6 +15,7 @@ final class SimpleStoreServiceTest extends TestCase
     function testStoreServiceGetStockIs42()
     {
         $this->assertEquals(42, $this->storeService->getStock("this", "that"));
+        $this->assertEquals("integer", gettype($this->storeService->getStock("this", "that")));
     }
 
 }

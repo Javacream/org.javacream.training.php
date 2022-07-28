@@ -1,6 +1,6 @@
 <?php
 
-require 'bootstrap.php';
+require '../bootstrap.php';
 $booksService = $Context->booksService;
 $books = $booksService->findAll();
 $startSize = sizeOf($books);
