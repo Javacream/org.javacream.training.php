@@ -4,7 +4,7 @@
 * Referent: Rainer Sawitzki, eMail: training@rainer-sawitzki.de
 
 * Beispiele
-  * https://github.com/Javacream/org.javacream.training.kubernetes
+  * https://github.com/Javacream/org.javacream.training.php
     *  Branch landesarchiv_28.7.2022
     
 * Seminarzeiten
