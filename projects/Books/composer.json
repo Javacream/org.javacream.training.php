@@ -1,0 +1,23 @@
+{
+    "name": "javacream/training",
+    "description": "php training",
+    "type": "project",
+    "require-dev": {
+        "phpunit/phpunit": "^9.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Javacream\\Training\\": "src/"
+        },
+        "classmap": [
+            "src/"
+        ]
+    },
+
+    "authors": [
+        {
+            "name": "Rainer Sawitzki",
+            "email": "training@rainer-sawitzki.de"
+        }
+    ]
+}
