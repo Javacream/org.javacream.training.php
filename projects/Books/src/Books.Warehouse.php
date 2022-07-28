@@ -1,5 +1,5 @@
 <?php namespace Javacream\Training\Books\Warehouse\Api;
-;
+
 class Book
 {
     public $isbn;
